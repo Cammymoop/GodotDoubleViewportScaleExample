@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://SpinnySprite.gd" type="Script" id=1]
+[ext_resource path="res://kirby_n_friends.png" type="Texture" id=2]
+
+[node name="Sprite" type="Sprite"]
+position = Vector2( 120, 120 )
+texture = ExtResource( 2 )
+script = ExtResource( 1 )
+
+[node name="SpinSwap" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="SpinSwap" to="." method="_on_SpinSwap_timeout"]
